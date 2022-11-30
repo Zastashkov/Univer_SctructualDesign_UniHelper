@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -94,7 +95,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="eXI-jX-oNo" userLabel="EmailTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="115.66666666666667"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@b.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tc1-4L-E00">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tc1-4L-E00">
                                         <rect key="frame" x="45" y="30" width="271" height="25.666666666666671"/>
                                         <color key="textColor" name="BrandTextColorDark"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -124,7 +125,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="KfJ-So-9k4" userLabel="PasswordTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="114"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWx-jd-606" userLabel="Password">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWx-jd-606" userLabel="Password">
                                         <rect key="frame" x="45" y="30" width="271" height="24"/>
                                         <color key="textColor" name="BrandTextColorDark"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -146,6 +147,13 @@
                                             <action selector="loginPressed:" destination="Sc2-Vw-hRJ" eventType="touchUpInside" id="cnl-hv-SCs"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvP-D9-lpu">
+                                        <rect key="frame" x="0.0" y="78" width="361" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="GWx-jd-606" secondAttribute="bottom" constant="60" id="1OO-QC-cvc"/>
@@ -176,7 +184,10 @@
                     <navigationItem key="navigationItem" id="hM2-IY-ZWU"/>
                     <connections>
                         <outlet property="emailTextField" destination="tc1-4L-E00" id="ifE-VV-ONK"/>
+                        <outlet property="emailView" destination="gxE-91-cjq" id="diD-rF-ZB5"/>
+                        <outlet property="errorLabel" destination="mvP-D9-lpu" id="lB6-QG-rpz"/>
                         <outlet property="passwordTextField" destination="GWx-jd-606" id="Zlf-dv-XJP"/>
+                        <outlet property="passwordView" destination="zTw-Tf-tIC" id="lC3-ai-McR"/>
                         <segue destination="4KU-w1-nDE" kind="show" identifier="LoginToUniversities" id="zpl-VW-PZH"/>
                     </connections>
                 </viewController>
@@ -250,6 +261,13 @@
                                             <action selector="registerPressed:" destination="iVi-CA-2AG" eventType="touchUpInside" id="JzS-yX-dCv"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHR-MR-3He">
+                                        <rect key="frame" x="0.0" y="76" width="361" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="pGc-df-hcA" firstAttribute="top" secondItem="tHi-bT-QYO" secondAttribute="top" constant="30" id="5Fq-hF-KlV"/>
@@ -279,7 +297,10 @@
                     <navigationItem key="navigationItem" id="4Qs-nh-270"/>
                     <connections>
                         <outlet property="emailTextField" destination="oFs-Yr-jbC" id="cTE-t0-fPd"/>
+                        <outlet property="emailView" destination="34I-tQ-hVE" id="SZZ-GA-Vi7"/>
+                        <outlet property="errorLabel" destination="kHR-MR-3He" id="k0w-68-h0L"/>
                         <outlet property="passwordTextField" destination="pGc-df-hcA" id="n3V-Qy-CH3"/>
+                        <outlet property="passwordView" destination="tHi-bT-QYO" id="4WC-Si-Igo"/>
                         <segue destination="4KU-w1-nDE" kind="show" identifier="RegisterToUniversities" id="cee-G7-dg4"/>
                     </connections>
                 </viewController>
@@ -413,5 +434,8 @@
         <namedColor name="BrandWhite">
             <color red="0.17299999296665192" green="0.15299999713897705" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -23,6 +23,7 @@
 		714D59C92934B679003170FC /* UniversityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714D59C72934B679003170FC /* UniversityCell.swift */; };
 		714D59CA2934B679003170FC /* UniversityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 714D59C82934B679003170FC /* UniversityCell.xib */; };
 		71C0CB582934E03000B41AC4 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C0CB572934E03000B41AC4 /* Direction.swift */; };
+		71C812D429373F1700E01C89 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C812D329373F1700E01C89 /* ExtensionUIView.swift */; };
 		E49AAD32A41D39CB6C2F8551 /* Pods_UniHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F27A8B980D26416C322D1B0 /* Pods_UniHelper.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		714D59C72934B679003170FC /* UniversityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCell.swift; sourceTree = "<group>"; };
 		714D59C82934B679003170FC /* UniversityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityCell.xib; sourceTree = "<group>"; };
 		71C0CB572934E03000B41AC4 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		71C812D329373F1700E01C89 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		C76F4B21A4E16A63F69CF3B8 /* Pods-UniHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniHelper.release.xcconfig"; path = "Target Support Files/Pods-UniHelper/Pods-UniHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				71121F3729338E6C009D88CF /* Constans.swift */,
 				714D59C12934A7A4003170FC /* University.swift */,
 				71C0CB572934E03000B41AC4 /* Direction.swift */,
+				71C812D329373F1700E01C89 /* ExtensionUIView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				7137199429337EEE005835E1 /* AppDelegate.swift in Sources */,
 				71121F3829338E6C009D88CF /* Constans.swift in Sources */,
 				71121F3E293399BE009D88CF /* UniversitiesViewController.swift in Sources */,
+				71C812D429373F1700E01C89 /* ExtensionUIView.swift in Sources */,
 				71C0CB582934E03000B41AC4 /* Direction.swift in Sources */,
 				71121F3C29339939009D88CF /* RegisterViewController.swift in Sources */,
 				71121F3A293398FF009D88CF /* LoginViewController.swift in Sources */,
